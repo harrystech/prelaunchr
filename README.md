@@ -1,7 +1,7 @@
 Prelaunchr
 ==========
 
-Originally open sourced over on our [engineering blog](http://engineering.harrys.com), Prelaunchr is a skeleton Rails application for quickly starting a viral prelaunch campaign for new companies or products. The campaign is conducive to social sharing and has prize levels based on the number of people each person refers. By default, we've included our original HTML/CSS for both the site and email to give you a better idea of how this looked when actually running.
+Originally open sourced over on our [engineering blog](http://engineering.harrys.com/2014/07/21/dont-launch-crickets.html), and discussed in great detail over at [Tim Ferris' Blog](http://fourhourworkweek.com/2014/07/21/harrys-prelaunchr-email), Prelaunchr is a skeleton Rails application for quickly starting a viral prelaunch campaign for new companies or products. The campaign is conducive to social sharing and has prize levels based on the number of people each person refers. By default, we've included our original HTML/CSS for both the site and email to give you a better idea of how this looked when actually running.
 
 ## Mechanics
 
