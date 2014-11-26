@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 
     attr_accessible :email
 
-    validates :email, :uniqueness => true, :format => { :with => /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/i, :message => "Invalid email format." }
+    validates :email, :presence => true, :uniqueness => true, :format => { :with => /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/i, :message => "Invalid email format." }
     validates :referral_code, :uniqueness => true
 
     before_create :create_referral_code
@@ -46,12 +46,7 @@ class User < ActiveRecord::Base
         referral_code = SecureRandom.hex(5)
         @collision = User.find_by_referral_code(referral_code)
 
-        while !@collision.nil?
-            referral_code = SecureRandom.hex(5)
-            @collision = User.find_by_referral_code(referral_code)
-        end
-
-        self.referral_code = referral_code
+        self.referral_code = UsersHelper.replace_if_collision(@collision, referral_code)
     end
 
     def send_welcome_email

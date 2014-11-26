@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     def create
         # Get user to see if they have already signed up
         @user = User.find_by_email(params[:user][:email]);
-            
+
         # If user doesnt exist, make them, and attach referrer
         if @user.nil?
 
@@ -81,14 +81,14 @@ class UsersController < ApplicationController
     end
 
     def policy
-          
-    end  
+
+    end
 
     def redirect
         redirect_to root_path, :status => 404
     end
 
-    private 
+    private
 
     def skip_first_page
         if !Rails.application.config.ended
