@@ -2,11 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 
-
 gem 'pg'
 
 gem 'activeadmin'
-
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -42,6 +40,5 @@ gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
-
 
 ruby '1.9.3'
