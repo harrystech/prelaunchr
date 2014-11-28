@@ -62,13 +62,23 @@ class UsersController < ApplicationController
   end
 
   def handle_ip
-    return if !User.find_by_email(params[:user][:email]).nil?
-    @cur_ip = IpAddress.find_by_address(request.env['HTTP_X_FORWARDED_FOR'])
+    # Prevent someone from gaming the site by referring themselves.
+    # Presumably, users are doing this from the same device so block
+    # their ip after their ip appears three times in the database.
+
+    address = request.env['HTTP_X_FORWARDED_FOR']
+    return if address.nil?
+
+    @cur_ip = IpAddress.find_by_address(address)
     if @cur_ip.nil?
-      @cur_ip = IpAddress.create(
-        address: request.env['HTTP_X_FORWARDED_FOR'], count: 1)
+      @cur_ip = IpAddress.create(address: address, count: 1)
+    elsif @cur_ip.count > 2
+      logger.info('IP address has already appeared three times in our records.
+                  Redirecting user back to landing page.')
+      return redirect_to root_path
     else
-      return redirect_to root_path if @cur_ip.count > 2
+      @cur_ip.count += 1
+      @cur_ip.save
     end
   end
 end
