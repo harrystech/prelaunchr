@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     @bodyId = 'home'
     @is_mobile = mobile_device?
 
-    @user = User.new # is this necessary?
+    @user = User.new
 
     respond_to do |format|
       format.html # new.html.erb
