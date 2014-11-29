@@ -19,6 +19,22 @@ describe UsersController, type: :controller do
       get :new
       expect(response).to redirect_to '/refer-a-friend'
     end
+
+    it 'assigns referral code to cookie if code belongs to user' do
+      referral_code = SecureRandom.hex(5)
+      expect(User).to receive(:find_by_referral_code) { User.new }
+
+      get :new, {ref: referral_code}
+      expect(cookies[:h_ref]).to eq(referral_code)
+    end
+
+    it 'redirects to intended url when user agent is not facebookexternalhit/1.1' do
+      referral_code = SecureRandom.hex(5)
+      request.env["HTTP_USER_AGENT"] = 'notfacebookexternalhit'
+
+      get :new, {ref: referral_code}
+      expect(response).to redirect_to root_path
+    end
   end
 
   describe "refer" do
@@ -102,7 +118,7 @@ describe UsersController, type: :controller do
         post :create, user: {email: generate_email()} # 4th time
         cur_ip = assigns(:cur_ip)
         expect(cur_ip.count).to eq(3)
-        expect(response).to redirect_to('/')
+        expect(response).to redirect_to root_path
       end
 
       it 'redirects user back to landing page when submitting email twice from different ip addresses' do
