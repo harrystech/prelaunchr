@@ -55,7 +55,7 @@ class UsersController < ApplicationController
   def skip_first_page
     if !Rails.application.config.ended
       email = cookies[:h_email]
-      if email and !User.find_by_email(email).nil?
+      if email and User.find_by_email(email)
         redirect_to '/refer-a-friend'
       else
         cookies.delete :h_email
