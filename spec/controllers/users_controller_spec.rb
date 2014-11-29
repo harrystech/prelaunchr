@@ -21,6 +21,22 @@ describe UsersController, type: :controller do
     end
   end
 
+  describe "refer" do
+    it "should redirect to landing page if there is no email in cookie" do
+      get :refer
+      expect(response).to redirect_to root_path
+    end
+
+    it "should render the refer a friend page if known email exists in cookie" do
+      cookies[:h_email] = generate_email
+      user = assigns(:user)
+      expect(User).to receive(:find_by_email) { User.new }
+
+      get :refer
+      expect(response).to render_template('refer')
+    end
+  end
+
   describe "saving users" do
     before(:each) do
       @email = generate_email
