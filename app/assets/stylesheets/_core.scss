@@ -46,7 +46,7 @@ html.home{
 #home .hero{
 	width: 100%;
 	height: 446px;
-	background: image-url("/assets/home/hero.jpg"") center center no-repeat;
+	background: image-url("/assets/home/hero.jpg") center center no-repeat;
 	background-size: 1600px 446px;
 	overflow: hidden;
 	position: relative;
@@ -89,7 +89,7 @@ html.home{
 	width: 46px;
 	height: 19px;
 	margin: 0 auto;
-	background: image-url("/assets/home/key.png"") 0 0 no-repeat;
+	background: image-url("/assets/home/key.png") 0 0 no-repeat;
 	background-size: 46px 19px;
 }
 
