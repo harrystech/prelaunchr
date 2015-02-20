@@ -417,6 +417,7 @@ DEPENDENCIES
 =======
   rails (= 4.2.0)
   rails_12factor
+  rails_serve_static_assets
   sass-rails (~> 5.0.1)
   sqlite3
   uglifier
