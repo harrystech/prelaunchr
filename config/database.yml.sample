@@ -1,8 +1,8 @@
 development:
   adapter: sqlite3
-  database: db/prelaunchr_development.sqlite3
+  database: prelaunchr
   host: localhost
 test:
   adapter: sqlite3
-  database: db/prelaunchr_development.sqlite3
+  database: prelaunchr
   host: localhost

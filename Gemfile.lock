@@ -1,6 +1,36 @@
+GIT
+  remote: git://github.com/activeadmin/activeadmin.git
+  revision: 1eda0b7bb7d9b61f120f59a61fad23a1055505f4
+  specs:
+    activeadmin (1.0.0.pre)
+      arbre (~> 1.0, >= 1.0.2)
+      bourbon
+      coffee-rails
+      formtastic (~> 3.1)
+      formtastic_i18n
+      inherited_resources (~> 1.4, != 1.5.0)
+      jquery-rails
+      jquery-ui-rails (~> 5.0)
+      kaminari (~> 0.15)
+      rails (>= 3.2, < 5.0)
+      ransack (~> 1.3)
+      sass-rails
+
+GIT
+  remote: git://github.com/josevalim/inherited_resources.git
+  revision: ff1c991307ff78cce98882b6986aeabbbcfd70c4
+  branch: rails-4-2
+  specs:
+    inherited_resources (1.5.1)
+      actionpack (>= 3.2, < 5)
+      has_scope (~> 0.6.0.rc)
+      railties (>= 3.2, < 5)
+      responders
+
 GEM
   remote: https://rubygems.org/
   specs:
+<<<<<<< HEAD
     actionmailer (3.2.22.2)
       actionpack (= 3.2.22.2)
       mail (~> 2.5.4)
@@ -61,22 +91,96 @@ GEM
       activerecord (>= 3.0, < 5)
       delayed_job (>= 3.0, < 5)
     devise (3.5.6)
+=======
+    actionmailer (4.2.0)
+      actionpack (= 4.2.0)
+      actionview (= 4.2.0)
+      activejob (= 4.2.0)
+      mail (~> 2.5, >= 2.5.4)
+      rails-dom-testing (~> 1.0, >= 1.0.5)
+    actionpack (4.2.0)
+      actionview (= 4.2.0)
+      activesupport (= 4.2.0)
+      rack (~> 1.6.0)
+      rack-test (~> 0.6.2)
+      rails-dom-testing (~> 1.0, >= 1.0.5)
+      rails-html-sanitizer (~> 1.0, >= 1.0.1)
+    actionview (4.2.0)
+      activesupport (= 4.2.0)
+      builder (~> 3.1)
+      erubis (~> 2.7.0)
+      rails-dom-testing (~> 1.0, >= 1.0.5)
+      rails-html-sanitizer (~> 1.0, >= 1.0.1)
+    activejob (4.2.0)
+      activesupport (= 4.2.0)
+      globalid (>= 0.3.0)
+    activemodel (4.2.0)
+      activesupport (= 4.2.0)
+      builder (~> 3.1)
+    activerecord (4.2.0)
+      activemodel (= 4.2.0)
+      activesupport (= 4.2.0)
+      arel (~> 6.0)
+    activesupport (4.2.0)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
+    arbre (1.0.3)
+      activesupport (>= 3.0.0)
+    arel (6.0.0)
+    bcrypt (3.1.9)
+    bourbon (4.1.1)
+      sass (~> 3.3)
+      thor
+    builder (3.2.2)
+    coderay (1.1.0)
+    coffee-rails (4.1.0)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0, < 5.0)
+    coffee-script (2.3.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.8.0)
+    delayed_job (4.0.6)
+      activesupport (>= 3.0, < 5.0)
+    delayed_job_active_record (4.0.3)
+      activerecord (>= 3.0, < 5.0)
+      delayed_job (>= 3.0, < 4.1)
+    devise (3.4.1)
+>>>>>>> Bump gems to Rails 4.2 and Ruby 2.2.0
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+<<<<<<< HEAD
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.6.0)
     formtastic (2.3.1)
       actionpack (>= 3.0)
     has_scope (0.6.0)
+=======
+    dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
+    erubis (2.7.0)
+    execjs (2.2.2)
+    formtastic (3.1.3)
+      actionpack (>= 3.2.13)
+    formtastic_i18n (0.1.1)
+    globalid (0.3.0)
+      activesupport (>= 4.1.0)
+    has_scope (0.6.0.rc)
+>>>>>>> Bump gems to Rails 4.2 and Ruby 2.2.0
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
     hike (1.2.3)
     i18n (0.7.0)
+<<<<<<< HEAD
     inherited_resources (1.6.0)
       actionpack (>= 3.2, < 5)
       has_scope (~> 0.6.0.rc)
@@ -164,10 +268,94 @@ GEM
       tilt (~> 1.3)
     slop (3.6.0)
     sprockets (2.2.3)
+=======
+    jquery-rails (4.0.3)
+      rails-dom-testing (~> 1.0)
+      railties (>= 4.2.0)
+      thor (>= 0.14, < 2.0)
+    jquery-ui-rails (5.0.3)
+      railties (>= 3.2.16)
+    json (1.8.2)
+    kaminari (0.16.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+    kgio (2.9.3)
+    loofah (2.0.1)
+      nokogiri (>= 1.5.9)
+    mail (2.6.3)
+      mime-types (>= 1.16, < 3)
+    method_source (0.8.2)
+    mime-types (2.4.3)
+    mini_portile (0.6.2)
+    minitest (5.5.1)
+    multi_json (1.10.1)
+    nokogiri (1.6.5)
+      mini_portile (~> 0.6.0)
+    orm_adapter (0.5.0)
+    pg (0.18.1)
+    polyamorous (1.1.0)
+      activerecord (>= 3.0)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    rack (1.6.0)
+    rack-test (0.6.3)
+      rack (>= 1.0)
+    rails (4.2.0)
+      actionmailer (= 4.2.0)
+      actionpack (= 4.2.0)
+      actionview (= 4.2.0)
+      activejob (= 4.2.0)
+      activemodel (= 4.2.0)
+      activerecord (= 4.2.0)
+      activesupport (= 4.2.0)
+      bundler (>= 1.3.0, < 2.0)
+      railties (= 4.2.0)
+      sprockets-rails
+    rails-deprecated_sanitizer (1.0.3)
+      activesupport (>= 4.2.0.alpha)
+    rails-dom-testing (1.0.5)
+      activesupport (>= 4.2.0.beta, < 5.0)
+      nokogiri (~> 1.6.0)
+      rails-deprecated_sanitizer (>= 1.0.1)
+    rails-html-sanitizer (1.0.1)
+      loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.3)
+    rails_stdout_logging (0.0.3)
+    railties (4.2.0)
+      actionpack (= 4.2.0)
+      activesupport (= 4.2.0)
+      rake (>= 0.8.7)
+      thor (>= 0.18.1, < 2.0)
+    raindrops (0.13.0)
+    rake (10.4.2)
+    ransack (1.6.2)
+      actionpack (>= 3.0)
+      activerecord (>= 3.0)
+      activesupport (>= 3.0)
+      i18n
+      polyamorous (~> 1.1)
+    responders (2.0.2)
+      railties (>= 4.2.0.alpha, < 5)
+    sass (3.4.10)
+    sass-rails (5.0.1)
+      railties (>= 4.0.0, < 5.0)
+      sass (~> 3.1)
+      sprockets (>= 2.8, < 4.0)
+      sprockets-rails (>= 2.0, < 4.0)
+      tilt (~> 1.1)
+    slop (3.6.0)
+    sprockets (2.12.3)
+>>>>>>> Bump gems to Rails 4.2 and Ruby 2.2.0
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+<<<<<<< HEAD
     test-unit (3.1.5)
       power_assert
     thor (0.19.1)
@@ -185,23 +373,54 @@ GEM
       rack
       raindrops (~> 0.7)
     warden (1.2.6)
+=======
+    sprockets-rails (2.2.2)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      sprockets (>= 2.8, < 4.0)
+    sqlite3 (1.3.10)
+    thor (0.19.1)
+    thread_safe (0.3.4)
+    tilt (1.4.1)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
+    uglifier (2.7.0)
+      execjs (>= 0.3.0)
+      json (>= 1.8.0)
+    unicorn (4.8.3)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
+    warden (1.2.3)
+>>>>>>> Bump gems to Rails 4.2 and Ruby 2.2.0
       rack (>= 1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  activeadmin
-  coffee-rails (~> 3.2.1)
-  delayed_job_active_record
+  activeadmin!
+  coffee-rails (~> 4.1.0)
+  delayed_job_active_record (~> 4.0.3)
+  devise
+  dotenv-rails
+  inherited_resources!
   pg
   pry
+<<<<<<< HEAD
   rails (= 3.2.22.2)
   rspec-mocks (= 3.4.1)
   rspec-rails (= 3.4.1)
   sass-rails (~> 3.2.3)
   test-unit (~> 3.0)
   uglifier (>= 1.0.3)
+=======
+  rails (= 4.2.0)
+  rails_12factor
+  sass-rails (~> 5.0.1)
+  sqlite3
+  uglifier
+>>>>>>> Bump gems to Rails 4.2 and Ruby 2.2.0
   unicorn
 
 BUNDLED WITH

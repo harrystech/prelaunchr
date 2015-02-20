@@ -1,0 +1,8 @@
+development:
+  secret_key_base: <%= ENV["SECRET_KEY_BASE"] %>
+
+test:
+  secret_key_base: <%= ENV["SECRET_KEY_BASE"] %>
+
+production:
+  secret_key_base: <%= ENV["SECRET_KEY_BASE"] %>
