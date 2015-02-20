@@ -44,3 +44,5 @@ bower.json
 /lib/assets/*.csv
 .DS_Store
 .elasticbeanstalk
+
+/.env

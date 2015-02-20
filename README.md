@@ -29,7 +29,7 @@ Clone the repo and enter the folder (commands not shown).
 Install Bundler, Foreman and Mailcatcher then Bundle:
 
 ```no-highlight
-gem install bundler foreman
+gem install bundler foreman mailcatcher
 bundle
 ```
 
@@ -53,6 +53,7 @@ Start local server and mail worker:
 foreman start
 ```
 
+<<<<<<< HEAD
 View your website at the port default `http://localhost:5000/`.
 View sent mails at `http://localhost:1080/`.
 
@@ -66,6 +67,10 @@ for security reasons. Password confirmation should match password.
 You can run this locally in a Rails console for development testing.
 
 If you are deployed to Heroku, you would run it there.
+=======
+View your website at the port default `http://localhost:7000/`.
+View sent mails at `http://localhost:1080/`.
+>>>>>>> 0b07c7c... Add information on viewing emails in development
 
 ## Teardown
 
