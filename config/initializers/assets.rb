@@ -1,1 +1,1 @@
-Rails.application.config.assets.precompile += %w( core.css bootstrap.css reset.css )
+Rails.application.config.assets.precompile += %w( active_admin.css application.css )
