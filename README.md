@@ -72,6 +72,17 @@ View your website at the port default `http://localhost:7000/`.
 View sent mails at `http://localhost:1080/`.
 >>>>>>> 0b07c7c... Add information on viewing emails in development
 
+### To create an admin account
+
+In Rails console, run this command. Be careful to not use the example admin user
+for security reasons. Password confirmation should match password.
+
+`AdminUser.create!(:email => 'admin@example.com', :password => 'password', :password_confirmation => 'passwordconfirmaiton')`
+
+You can run this locally in a Rails console for development testing.
+
+If you are deployed to Heroku, you would run it there.
+
 ## Teardown
 
 When your prelaunch campaign comes to an end we've included a helpful `rake` task to help you compile the list of winners into CSV's containing the email addresses and the amount of referrals the user had.
@@ -80,7 +91,6 @@ When your prelaunch campaign comes to an end we've included a helpful `rake` tas
 
 ## Configuration
 
-* Change the default Admin user credentials in `/db/seeds.rb`
 * Set the different prize levels on the `User::REFERRAL_STEPS` constant inside `/app/models/user.rb`
 * The `config.ended` setting in `/config/application.rb` decides whether the prelaunch campaign has ended or not (e.g. Active/Inactive). We've included this option so you can quickly close the application and direct users to your newly launched site.
 
