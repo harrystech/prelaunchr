@@ -1,6 +1,9 @@
 module UsersHelper
-  def self.replace_if_collision(collision, referral_code)
-    while !collision.nil?
+  def self.unused_referral_code
+    referral_code = SecureRandom.hex(5)
+    collision = User.find_by_referral_code(referral_code)
+
+    until collision.nil?
       referral_code = SecureRandom.hex(5)
       collision = User.find_by_referral_code(referral_code)
     end

@@ -22,7 +22,8 @@ group :development, :test do
   gem 'pry'
   # To use debugger
   # gem 'debugger'
-  gem 'rspec-rails', '~> 3.1.0'
+  gem 'rspec-rails', '3.4.1'
+  gem 'rspec-mocks', '3.4.1'
 end
 
 gem 'delayed_job_active_record'
