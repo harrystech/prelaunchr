@@ -40,5 +40,3 @@ gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
-
-ruby '1.9.3'
