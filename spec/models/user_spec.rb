@@ -39,7 +39,8 @@ RSpec.describe UsersHelper do
     end
 
     it 'should return a new referral code if there is a collision' do
-      expect(User).to receive(:find_by_referral_code).exactly(2).times.and_return('collision', nil)
+      expect(User).to receive(:find_by_referral_code)
+        .exactly(2).times.and_return('collision', nil)
       UsersHelper.unused_referral_code
     end
   end
