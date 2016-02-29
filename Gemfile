@@ -2,13 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 gem 'pg'
 
 gem 'activeadmin'
-
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -22,8 +18,12 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :development do
+group :development, :test do
   gem 'pry'
+  # To use debugger
+  # gem 'debugger'
+  gem 'rspec-rails', '3.4.1'
+  gem 'rspec-mocks', '3.4.1'
 end
 
 gem 'delayed_job_active_record'
@@ -41,6 +41,3 @@ gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
