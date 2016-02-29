@@ -53,13 +53,13 @@ class UsersController < ApplicationController
   private
 
   def skip_first_page
-    if !Rails.application.config.ended
-      email = cookies[:h_email]
-      if email and User.find_by_email(email)
-        redirect_to '/refer-a-friend'
-      else
-        cookies.delete :h_email
-      end
+    return if Rails.application.config.ended
+
+    email = cookies[:h_email]
+    if email && User.find_by_email(email)
+      redirect_to '/refer-a-friend'
+    else
+      cookies.delete :h_email
     end
   end
 
@@ -71,16 +71,16 @@ class UsersController < ApplicationController
     address = request.env['HTTP_X_FORWARDED_FOR']
     return if address.nil?
 
-    @cur_ip = IpAddress.find_by_address(address)
-    if @cur_ip.nil?
-      @cur_ip = IpAddress.create(address: address, count: 1)
-    elsif @cur_ip.count > 2
+    current_ip = IpAddress.find_by_address(address)
+    if current_ip.nil?
+      current_ip = IpAddress.create(address: address, count: 1)
+    elsif current_ip.count > 2
       logger.info('IP address has already appeared three times in our records.
-                  Redirecting user back to landing page.')
+                 Redirecting user back to landing page.')
       return redirect_to root_path
     else
-      @cur_ip.count += 1
-      @cur_ip.save
+      current_ip.count += 1
+      current_ip.save
     end
   end
 end
