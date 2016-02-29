@@ -7,6 +7,10 @@ end
 
 describe UsersController, type: :controller do
   describe 'new' do
+    before(:each) do
+      @referral_code = SecureRandom.hex(5)
+    end
+
     it 'renders new user/landing page on first visit' do
       get :new
       expect(response).to have_http_status(:success)
@@ -23,20 +27,25 @@ describe UsersController, type: :controller do
     end
 
     it 'assigns referral code to cookie if code belongs to user' do
-      referral_code = SecureRandom.hex(5)
-      expect(User).to receive(:find_by_referral_code).with(referral_code) do
+      expect(User).to receive(:find_by_referral_code).with(@referral_code) do
         User.new
       end
 
-      get :new, ref: referral_code
-      expect(cookies[:h_ref]).to eq(referral_code)
+      get :new, ref: @referral_code
+      expect(cookies[:h_ref]).to eq(@referral_code)
+    end
+
+    it 'continues request when user agent is facebookexternalhit/1.1' do
+      request.env['HTTP_USER_AGENT'] = 'facebookexternalhit/1.1'
+
+      get :new, ref: @referral_code
+      expect(response).to render_template :new
     end
 
     it 'redirects to intended url when user agent is not facebookexternalhit/1.1' do
-      referral_code = SecureRandom.hex(5)
       request.env['HTTP_USER_AGENT'] = 'notfacebookexternalhit'
 
-      get :new, ref: referral_code
+      get :new, ref: @referral_code
       expect(response).to redirect_to root_path
     end
   end
