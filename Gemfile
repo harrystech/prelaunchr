@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+ruby '2.3.0'
+
+gem 'rails', '3.2.22.2'
 
 gem 'pg'
 
@@ -24,6 +26,7 @@ group :development, :test do
   # gem 'debugger'
   gem 'rspec-rails', '3.4.1'
   gem 'rspec-mocks', '3.4.1'
+  gem 'test-unit', '~> 3.0'
 end
 
 gem 'delayed_job_active_record'
