@@ -10,5 +10,5 @@ ActiveAdmin.register User do
   end
 
   actions :index, :show
-  
+
 end
