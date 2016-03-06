@@ -54,6 +54,11 @@ cp config/database.yml.sample config/database.yml
 cp .env.sample .env
 ```
 
+Update your newly created .env file with the needed configuration
+DEFAULT\_MAILER\_HOST: sets the action mailer default host as seen in
+config/environment/<environment>.rb. You will minimally need this in production.
+SECRET\_KEY\_BASE: sets a secret key to be used by config/initializers/devise.rb
+
 Setup your local database:
 
 ```no-highlight
