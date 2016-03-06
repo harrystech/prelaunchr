@@ -1,19 +1,33 @@
 ## NOTE
 
-We unfortunately don't have time to support issues, fixes, or pull requests for this repository. This code was posted as is, in hopes it would be useful to others in the community.
+We unfortunately don't have time to support issues, fixes, or pull requests for
+this repository. This code was posted as is, in hopes it would be useful to
+others in the community.
 
 Prelaunchr
 ==========
 
-Originally open sourced over on our [engineering blog](http://engineering.harrys.com/2014/07/21/dont-launch-crickets.html), and discussed in great detail over at [Tim Ferriss' Blog](http://fourhourworkweek.com/2014/07/21/harrys-prelaunchr-email), Prelaunchr is a skeleton Rails application for quickly starting a viral prelaunch campaign for new companies or products. The campaign is conducive to social sharing and has prize levels based on the number of people each person refers. By default, we've included our original HTML/CSS for both the site and email to give you a better idea of how this looked when actually running.
+Originally open sourced over on our [engineering blog](http://engineering.harrys.com/2014/07/21/dont-launch-crickets.html),
+and discussed in great detail over at [Tim Ferriss' Blog](http://fourhourworkweek.com/2014/07/21/harrys-prelaunchr-email),
+Prelaunchr is a skeleton Rails application for quickly starting a viral
+prelaunch campaign for new companies or products. The campaign is conducive to
+social sharing and has prize levels based on the number of people each person
+refers. By default, we've included our original HTML/CSS for both the site and
+email to give you a better idea of how this looked when actually running.
 
 ## Mechanics
 
-Prelaunchr has a main mechanic from which everything else is derived: Every `User` is given a unique `referral_code` which is how the application knows who referred a signing up user. Based on the amount of referrals a `User` has brought to the site, they are put into a different "prize group". The groups, amounts, and prizes are completely up to you to set.
+Prelaunchr has a main mechanic from which everything else is derived: Every
+`User` is given a unique `referral_code` which is how the application knows who
+referred a signing up user. Based on the amount of referrals a `User` has
+brought to the site, they are put into a different "prize group". The groups,
+amounts, and prizes are completely up to you to set.
 
 ## IP Blocking
 
-By default, we block more than 2 sign-ups from the same IP address. This was simplistic, but was good enough for us during our campaign. If you want something more substantial take a look at [Rack::Attack](https://github.com/kickstarter/rack-attack)
+By default, we block more than 2 sign-ups from the same IP address. This was
+simplistic, but was good enough for us during our campaign. If you want
+something more substantial take a look at [Rack::Attack](https://github.com/kickstarter/rack-attack)
 
 
 ## Developer Setup
@@ -80,14 +94,21 @@ If you are deployed to Heroku, you would run it there.
 
 ## Teardown
 
-When your prelaunch campaign comes to an end we've included a helpful `rake` task to help you compile the list of winners into CSV's containing the email addresses and the amount of referrals the user had.
+When your prelaunch campaign comes to an end we've included a helpful `rake`
+task to help you compile the list of winners into CSV's containing the email
+addresses and the amount of referrals the user had.
 
-* Run `bundle exec rake prelaunchr:create_winner_csvs` and the app will export CSV's in `/lib/assets` corresponding to each prize group.
+* Run `bundle exec rake prelaunchr:create_winner_csvs` and the app will export
+CSV's in `/lib/assets` corresponding to each prize group.
 
 ## Configuration
 
-* Set the different prize levels on the `User::REFERRAL_STEPS` constant inside `/app/models/user.rb`
-* The `config.ended` setting in `/config/application.rb` decides whether the prelaunch campaign has ended or not (e.g. Active/Inactive). We've included this option so you can quickly close the application and direct users to your newly launched site.
+* Set the different prize levels on the `User::REFERRAL_STEPS` constant inside
+`/app/models/user.rb`
+* The `config.ended` setting in `/config/application.rb` decides whether the
+prelaunch campaign has ended or not (e.g. Active/Inactive). We've included this
+option so you can quickly close the application and direct users to your newly
+launched site.
 
 ## License
 
