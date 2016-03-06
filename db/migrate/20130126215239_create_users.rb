@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :referral_code
       t.integer :referrer_id
 
-      t.timestamps null: true
+      t.timestamps null: false
     end
   end
 end

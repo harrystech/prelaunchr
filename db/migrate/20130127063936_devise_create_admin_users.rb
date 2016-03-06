@@ -40,7 +40,7 @@ class DeviseCreateAdminUsers < ActiveRecord::Migration
       # t.string :authentication_token
 
 
-      t.timestamps null: true
+      t.timestamps null: false
     end
 
     add_index :admin_users, :email,                :unique => true
