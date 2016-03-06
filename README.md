@@ -69,7 +69,7 @@ bundle exec rake db:migrate
 Start local server and mail worker:
 
 ```no-highlight
-foreman start
+foreman start -f Procfile.dev
 ```
 
 View your website at the port default `http://localhost:5000/`.
