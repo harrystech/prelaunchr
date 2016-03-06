@@ -5,7 +5,7 @@ class CreateAdminNotes < ActiveRecord::Migration
       t.string :resource_type, :null => false
       t.references :admin_user, :polymorphic => true
       t.text :body
-      t.timestamps
+      t.timestamps null: true
     end
     add_index :admin_notes, [:resource_type, :resource_id]
     add_index :admin_notes, [:admin_user_type, :admin_user_id]
