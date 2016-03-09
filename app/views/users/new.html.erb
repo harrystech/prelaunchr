@@ -5,16 +5,8 @@
 
 <div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
   <% if Rails.application.config.ended %>
-    <p class="thanks brandon">THANK YOU FOR PARTICIPATING<br>IN OUR PRE-LAUNCH.</p>
-    <p class="compiling brandon">WE ARE COMPILING REWARDS RIGHT NOW AND WILL EMAIL<br/>COUPON CODES TO ALL RECIPIENTS IN THE NEXT DAY OR TWO</p>
-    <p class="go-to brandon">In the meantime, head to  <a href="http://www.harrys.com/">WWW.HARRYS.COM</a></p>
-    <p class="again brandon">Thank You Again!</p>
+    <%= render "users/campaign_ended" %>
   <% else %>
-    <div class="key"></div>
-    <p class="byline brandon">Be the first to know</p>
-    <%= form_for @user, :url => { :action => "create" } do |f| %>
-      <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon" %>
-      <input class="submit brandon" name="commit" type="submit" value="Step Inside" />
-    <% end %>
+    <%= render "users/campaign_ongoing" %>
   <% end %>
 </div>
