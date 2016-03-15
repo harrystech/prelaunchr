@@ -6,8 +6,8 @@ def generate_email
 end
 
 describe UsersController, type: :controller do
-  before(:all) do
-    Rails.application.config.ended = false
+  before do
+    allow(Rails.application.config).to receive(:ended) { false }
   end
 
   describe 'new' do
