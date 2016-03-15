@@ -6,6 +6,10 @@ def generate_email
 end
 
 describe UsersController, type: :controller do
+  before do
+    allow(Rails.application.config).to receive(:ended) { false }
+  end
+
   describe 'new' do
     before(:each) do
       @referral_code = SecureRandom.hex(5)

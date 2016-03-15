@@ -1,18 +1,3 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require reset
- *= require_self
- */
-
-
 form{
 	margin-bottom: 0;
 }
@@ -46,7 +31,7 @@ html.home{
 #home .hero{
 	width: 100%;
 	height: 446px;
-	background: url(/assets/home/hero.jpg) center center no-repeat;
+	background: image-url("home/hero.jpg") center center no-repeat;
 	background-size: 1600px 446px;
 	overflow: hidden;
 	position: relative;
@@ -89,7 +74,7 @@ html.home{
 	width: 46px;
 	height: 19px;
 	margin: 0 auto;
-	background: url(/assets/home/key.png) 0 0 no-repeat;
+	background: image-url("home/key.png") 0 0 no-repeat;
 	background-size: 46px 19px;
 }
 
@@ -237,7 +222,7 @@ html.home{
 	font-size: 14px;
 	text-align: center;
 }
- 
+
 
 
 /* Refer a friend page */
@@ -293,7 +278,7 @@ html.home{
 	line-height: 0;
 	margin-right: 14px;
 	letter-spacing: 1px;
-	background: url(/assets/refer/logo.png) 0 0 no-repeat;
+	background: image-url("refer/logo.png") 0 0 no-repeat;
 	background-size: 106px 19px;
 	height: 19px;
 	width: 106px;
@@ -309,7 +294,7 @@ html.home{
 #refer .mammoth{
 	width: 612px;
 	height: 394px;
-	background: url(/assets/refer/mammoth.png) 0 0 no-repeat;
+	background: image-url("refer/mammoth.png") 0 0 no-repeat;
 	background-size: 610px 394px;
 	overflow: hidden;
 	margin-top: 15px;
@@ -384,14 +369,14 @@ html.home{
 }
 
 #refer .share-wrap .social-links .fb{
-	background: url(/assets/refer/fb.png);
+	background: image-url("refer/fb.png");
 	background-size: 27px 27px;
 	width: 27px;
 	height: 27px;
 }
 
 #refer .share-wrap .social-links .twit{
-	background: url(/assets/refer/twit.png);
+	background: image-url("refer/twit.png");
 	background-size: 27px 27px;
 	width: 27px;
 	height: 27px;
@@ -428,7 +413,7 @@ html.home{
 #refer .prizes .progress{
 	height: 4px;
 	width: 100%;
-	background: url(/assets/refer/progress-bg.png) 0 0 repeat-x;
+	background: image-url("refer/progress-bg.png") 0 0 repeat-x;
 	background-size: 1px 4px;
 	position: absolute;
 	top: 100px;
@@ -442,7 +427,7 @@ html.home{
 }
 
 #refer .prizes .progress .mover .bar{
-	background: url(/assets/refer/progress-done.png) 0 0 repeat-x;
+	background: image-url("refer/progress-done.png") 0 0 repeat-x;
 	width: 165px;
 	height: 4px;
 	-webkit-background-size: 1px 4px;
@@ -518,14 +503,14 @@ html.home{
 #refer .prizes .products li.product .caret{
 	width: 100%;
 	height: 10px;
-	background: url(/assets/refer/caret.png) center center no-repeat;
+	background: image-url("refer/caret.png") center center no-repeat;
 	background-size: 16px 10px;
 	position: absolute;
 	bottom: -15px;
 }
 
 #refer .prizes .products li.product.selected .caret{
-	background: url(/assets/refer/caret-selected.png) center center no-repeat;
+	background: image-url("refer/caret-selected.png") center center no-repeat;
 	background-size: 16px 10px;
 }
 
@@ -631,57 +616,57 @@ only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2) {
 	#home .hero{
-		background: url(/assets/home/hero@2x.jpg) center center no-repeat;
+		background: image-url("home/hero@2x.jpg") center center no-repeat;
 		background-size: 1600px 446px;
 	}
 
 	#home .form-wrap .key{
-		background: url(/assets/home/key@2x.png) 0 0 no-repeat;
+		background: image-url("home/key@2x.png") 0 0 no-repeat;
 		background-size: 46px 19px;
 	}
 
 	#refer .header .logo{
-		background: url(/assets/refer/logo@2x.png) 0 0 no-repeat;
+		background: image-url("refer/logo@2x.png") 0 0 no-repeat;
 		background-size: 106px 19px;
 	}
 
 	#refer .mammoth{
-		background: url(/assets/refer/mammoth@2x.png) 0 0 no-repeat;
+		background: image-url("refer/mammoth@2x.png") 0 0 no-repeat;
 		background-size: 610px 394px;
 	}
 
 	#refer .share-wrap .social-links .fb{
-		background: url(/assets/refer/fb@2x.png);
+		background: image-url("refer/fb@2x.png");
 		background-size: 27px 27px;
 	}
 
 	#refer .share-wrap .social-links .twit{
-		background: url(/assets/refer/twit@2x.png);
+		background: image-url("refer/twit@2x.png");
 		background-size: 27px 27px;
 	}
 
 	#refer .prizes .progress{
-		background: url(/assets/refer/progress-bg@2x.png) 0 0 repeat-x;
+		background: image-url("refer/progress-bg@2x.png") 0 0 repeat-x;
 		background-size: 1px 4px;
 	}
 
 	#refer .prizes .progress .mover .bar{
-		background: url(/assets/refer/progress-done@2x.png) 0 0 repeat-x;
+		background: image-url("refer/progress-done@2x.png") 0 0 repeat-x;
 		background-size: 1px 4px;
 	}
 
 	#refer .prizes .progress .mover .razor{
-		background: url(/assets/refer/razor@2x.png) 0 0 no-repeat;
+		background: image-url("refer/razor@2x.png") 0 0 no-repeat;
 		background-size: 82px 23px;
 	}
 
 	#refer .prizes .products li.product .caret{
-		background: url(/assets/refer/caret@2x.png) center center no-repeat;
+		background: image-url("refer/caret@2x.png") center center no-repeat;
 		background-size: 16px 10px;
 	}
 
 	#refer .prizes .products li.product.selected .caret{
-		background: url(/assets/refer/caret-selected@2x.png) center center no-repeat;
+		background: image-url("refer/caret-selected@2x.png") center center no-repeat;
 		background-size: 16px 10px;
 	}
 }

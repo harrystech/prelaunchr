@@ -4,7 +4,7 @@ class CreateIpAddresses < ActiveRecord::Migration
       t.string :address
       t.integer :count
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

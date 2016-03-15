@@ -14,7 +14,9 @@ class ApplicationController < ActionController::Base
   protected
 
   def ref_to_cookie
-    return unless params.key?(:ref) || Rails.application.config.ended
+    campaign_ended = Rails.application.config.ended
+    return if campaign_ended || !params[:ref]
+
     unless User.find_by_referral_code(params[:ref]).nil?
       h_ref = { value: params[:ref], expires: 1.week.from_now }
       cookies[:h_ref] = h_ref
