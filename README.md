@@ -80,17 +80,6 @@ You can run this locally in a Rails console for development testing.
 
 If you are deployed to Heroku, you would run it there.
 
-### To create an admin account
-
-In Rails console, run this command. Be careful to not use the example admin user
-for security reasons. Password confirmation should match password.
-
-`AdminUser.create!(:email => 'admin@example.com', :password => 'password', :password_confirmation => 'passwordconfirmaiton')`
-
-You can run this locally in a Rails console for development testing.
-
-If you are deployed to Heroku, you would run it there.
-
 ## Teardown
 
 When your prelaunch campaign comes to an end we've included a helpful `rake`
