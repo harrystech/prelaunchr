@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+  - 2.3.0
+env:
+  - DEFAULT_MAILER_HOST=localhost:1080 SECRET_KEY_BASE=asecretkeybase CAMPAIGN_ENDED=false MAILER_SENDER=mailer@example.com
+services:
+- postgresql
+addons:
+  postgresql: "9.4"
+before_script:
+  - psql -c 'create database prelaunchr_test;' -U postgres
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec spec/
