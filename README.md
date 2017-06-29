@@ -1,6 +1,8 @@
 Prelaunchr
 ==========
 
+[![Build Status](https://travis-ci.org/harrystech/prelaunchr.svg?branch=master)](https://travis-ci.org/harrystech/prelaunchr)
+
 Originally open sourced over on our [engineering blog](http://engineering.harrys.com/2014/07/21/dont-launch-crickets.html),
 and discussed in great detail over at [Tim Ferriss' Blog](http://fourhourworkweek.com/2014/07/21/harrys-prelaunchr-email),
 Prelaunchr is a skeleton Rails application for quickly starting a viral
