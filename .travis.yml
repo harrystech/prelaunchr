@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.3.0
+  - 2.5.0
 env:
   - DEFAULT_MAILER_HOST=localhost:1080 SECRET_KEY_BASE=asecretkeybase CAMPAIGN_ENDED=false MAILER_SENDER=mailer@example.com
 services:
