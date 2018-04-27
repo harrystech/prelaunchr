@@ -28,10 +28,10 @@ something more substantial take a look at [Rack::Attack](https://github.com/kick
 
 ## Developer Setup
 
-Get Ruby 2.3.0 (rbenv), bundle and install:
+Get Ruby 2.5.0 (rbenv), bundle and install:
 
 ```no-highlight
-brew update && brew upgrade ruby-build && rbenv install 2.3.0
+brew update && brew upgrade ruby-build && rbenv install 2.5.0
 ```
 
 Clone the repo and enter the folder (commands not shown).
