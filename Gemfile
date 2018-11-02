@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.5.0'
+ruby '2.5.1'
 
 gem 'activeadmin', '1.0.0'
 gem 'delayed_job_active_record', '~> 4.1.2'
