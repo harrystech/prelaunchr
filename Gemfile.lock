@@ -85,7 +85,7 @@ GEM
       railties (>= 4.0, < 5.1)
     erubis (2.7.0)
     execjs (2.7.0)
-    ffi (1.9.18)
+    ffi (1.9.25)
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.6.0)
@@ -265,4 +265,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.5
+   1.17.1
