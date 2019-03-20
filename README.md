@@ -3,7 +3,7 @@ Prelaunchr
 
 ## Archived
 
-**Warning: This project is unmaintained and has known dependencies with known security vulnerabilities.**
+**Warning: This project is unmaintained and has dependencies with known security vulnerabilities.**
 
 Six years after our own viral pre-launch campaign, and having enabled many other teams to start with a splash, it is time to retire the Prelaunchr project. We have taken the step of archiving Prelaunchr - it has been hard to update vulnerable dependencies of a project that we haven't used since 2013! You are welcome to fork the project, but we recommend updating all dependencies to recent versions and enabling Github's security scans.
 
