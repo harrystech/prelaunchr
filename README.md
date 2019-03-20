@@ -1,7 +1,20 @@
 Prelaunchr
 ==========
 
+## Archived
+
+**Warning: This project is unmaintained and has known dependencies with known security vulnerabilities.**
+
+Six years after our own viral pre-launch campaign, and having enabled many other teams to start with a splash, it is time to retire the Prelaunchr project. We have taken the step of archiving Prelaunchr - it has been hard to update vulnerable dependencies of a project that we haven't used since 2013! You are welcome to fork the project, but we recommend updating all dependencies to recent versions and enabling Github's security scans.
+
+We will not be updating the project or responding to issues or PRs. Good luck with your launches and beyond.
+
+— Harry's Engineering Team
+
+
 [![Build Status](https://travis-ci.org/harrystech/prelaunchr.svg?branch=master)](https://travis-ci.org/harrystech/prelaunchr)
+
+## About
 
 Originally open sourced over on our [engineering blog](http://engineering.harrys.com/2014/07/21/dont-launch-crickets.html),
 and discussed in great detail over at [Tim Ferriss' Blog](http://fourhourworkweek.com/2014/07/21/harrys-prelaunchr-email),
